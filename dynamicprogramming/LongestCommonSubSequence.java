@@ -1,17 +1,19 @@
+package dynamicprogramming;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.stream.*;
 import java.util.*;
 import java.util.Arrays;
 
-public class Solution {
+public class LongestCommonSubSequence {
         
     public static void main(String[] args) {
        Scanner scan = new Scanner(System.in);
        String string1 = scan.next();
        String string2 = scan.next();
       
-       System.out.println(longestSubSequence(string1,string2));
+       System.out.println(LongestCommonSubSequence.longestSubSequence(string1,string2));
        
     }
     

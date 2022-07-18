@@ -1,4 +1,4 @@
-/***
+package dynamicprogramming; /***
 * Author: Ganesh
 ****/
 
@@ -8,20 +8,21 @@ import java.util.stream.*;
 import java.util.*;
 import java.util.Arrays;
 
-public class LongestIncreasingSubsequence {
+public class LongestDecreasingSubsequence {
         
     public static void main(String[] args) {
-      int [] input = {3, 10, 2, 1, 20};
-      System.out.println(longest_increasing_subsequence(input));
+      int [] input = { 2,3};
+      System.out.println(longestDecreasingSubsequence(input));
     }
     
-    private static int longest_increasing_subsequence(int[] a){
+    private static int longestDecreasingSubsequence(int[] a){
       int [] lis = new int[a.length];
-      int [] prev = new int[a.length];
       for(int i=0;i<a.length;i++){
         for(int j=0;j<i;j++){
-          if(a[i] > a[j]){
+          if(a[i] < a[j]){
               lis[i] = lis[j] >= lis[i] ? 1 + lis[j]: lis[i];     
+          }else{
+              lis[i] = lis[j];
           }
           
         }   

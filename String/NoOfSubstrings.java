@@ -1,4 +1,4 @@
-// Java program to count number of substrings
+package String;// Java program to count number of substrings
 // of a string
 import java.io.*;
  

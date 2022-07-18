@@ -1,3 +1,5 @@
+package String;
+
 /***********************
 *
 * Author: Ganesh
@@ -16,7 +18,7 @@ private static void allStringCombinationSameSize(String str,String ss){
           char c = str.charAt(i);
           String otherContent = str.substring(0,i)+str.substring(i+1);
           if(cused[c-'a'] == false){
-            allStringCombination(otherContent,ss+c);
+              allStringCombinationSameSize(otherContent,ss+c);
             cused[c-'a']=true;
           }
           

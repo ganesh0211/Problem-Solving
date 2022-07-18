@@ -1,3 +1,10 @@
+package Puzzles;
+
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class PrimeGames{
   
     public static void main(String[] args) {
@@ -21,7 +28,7 @@ public class PrimeGames{
     public static String getNonPrime(int no,int index){
       String finalString="";
       
-      List<?> data = IntStream.range(1,no).filter(x-> x==1 || !isPrime(x)).filter( x-> !containsPrime(x)).mapToObj(Integer::toString)
+      List<?> data = IntStream.range(1,no).filter(x-> x==1 || !isPrime(x)).filter(x-> !containsPrime(x)).mapToObj(Integer::toString)
     .collect(Collectors.toList());
       System.out.println(data);
       return String.valueOf(data.get(index));
